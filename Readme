@@ -1,3 +1,3 @@
 To run, go to cmd, cd into the node server directory and type "node server.js" without the quote into cmd
 
-then type localhost:8888 into address bar
+then type localhost into address bar

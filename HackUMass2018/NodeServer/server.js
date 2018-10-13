@@ -29,6 +29,6 @@ function onRequest(request, response){
 //first request = info about user's request
 //response = what to send back
 
-http.createServer(onRequest).listen(8888);
+http.createServer(onRequest).listen(0000);
 console.log("server is now running");
 // parameter = what you want to run when user connects to server

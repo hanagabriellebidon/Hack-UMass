@@ -1,0 +1,10 @@
+<!doctype HTML>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    {% for post in posts %}
+        <h1>{{ post.title}}</h1>
+        <p>{{post.text}}</p>
+{%endfor%}

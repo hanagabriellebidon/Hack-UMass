@@ -7,6 +7,7 @@ var fs = require('fs');
 function send404Response(response){
     response.writeHead(404, {"Content-Type": "text/plain"});
     response.write("Error 404: page not found");
+    console.log("lmaoooo");
     response.end();
 
 }
@@ -14,9 +15,12 @@ function send404Response(response){
 //hande user request (listens to user request and handles the request)
 function onRequest(request, response){
     if(request.method == 'GET' && request.url == '/'){
+        console.log("lmaoo");
         response.writeHead(200,{"Content-Type": "text/html"});
         //sends back html
+        console.log("html is sending");
         fs.createReadStream("Fourth_Project.html").pipe(response);
+        console.log("wtf is happening");
     }
     else{
         send404Response(response);

@@ -42,7 +42,7 @@ def frontpage(request):
         #keyname will be accesible (data)
         #'posts' variable available
     }
-    return render(request, 'posts.html', context= context )
+    return render(request, 'fronpage.html', context= context )
 
 
 class BookListView(generic.ListView):

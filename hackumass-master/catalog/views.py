@@ -2,6 +2,13 @@ from django.shortcuts import render
 from catalog.models import Book, Author, BookInstance, Language, Genre, Post
 from django.views import generic
 
+posts = [
+    {
+        'text': 'Usertext',
+        'title': 'Usertitle'
+    },
+]
+
 # Create your views here.
 def index(request):
     """View function for home page of site."""
@@ -20,17 +27,22 @@ def index(request):
         'num_books': num_books,
         'num_instances': num_instances,
         'num_instances_available': num_instances_available,
-        'num_authors': num_authors,
+        'num_authors': num_authors
     }
+
 
     # Render the HTML template index.html with the data in the context variable
     return render(request, 'index.html', context=context)
 
 def frontpage(request):
     """View function for home page of site."""
-
-    return render(request, 'frontpage.html')
-
+    context = {
+        'posts': posts
+        #'posts' assigned to post key
+        #keyname will be accesible (data)
+        #'posts' variable available
+    }
+    return render(request, 'posts.html', context= context )
 
 
 class BookListView(generic.ListView):

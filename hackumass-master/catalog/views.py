@@ -29,8 +29,13 @@ def frontpage(request):
 
     }
     return render(request, 'frontpage.html', context= context )
+
+def submitPage(request):
+    context = {}
+    return render(request, 'submit.html', context=context)
+
 def postPage(request):
-    context = {
-        'posts': Post.objects.all()
-    }
+    context = {}
+    #    'posts': Post.objects.all()
+    #}
     return render(request, 'posts.html', context = context)
